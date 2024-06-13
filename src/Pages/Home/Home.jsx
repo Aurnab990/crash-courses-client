@@ -1,9 +1,12 @@
 import React from 'react';
+import Courses from '../Courses/Courses';
+import Headers from '../Header/Headers';
 
 const Home = () => {
     return (
         <div>
-            <h1 className='text-red-500'>Helo home</h1>
+            <Headers></Headers>
+            <Courses></Courses>
         </div>
     );
 };

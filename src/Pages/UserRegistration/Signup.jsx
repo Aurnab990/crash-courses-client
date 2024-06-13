@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Signup = () => {
     const { createUser } = useAuth();
@@ -14,11 +15,42 @@ const Signup = () => {
         const password = form.password.value;
 
         createUser(email, password)
+        .then((data)=>{
+          if(data?.user?.email){
+            const userInfo = {
+              email: data?.user?.email,
+              name: name
+            };
+            return fetch('http://localhost:3000/user',{
+              method: "POST",
+            headers:{
+              "Content-Type":"application/json"
+            },
+            body: JSON.stringify(userInfo)
+            })
+
+            .then(response => {
+              if (response.ok) {
+                  toast.success("Account Created, Wait a Sec");
+                  navigate("/");
+              } else {
+                  toast.error("Failed! to create user on server");
+              }
+          });
+  } else {
+      toast.error("Account already created by this email");
+  }
+})
+            
+          .catch(err=>console.log(err));
+        
 
 
     }
     return (
-        <div className="relative">
+        <div>
+          <Toaster></Toaster>
+          <div className="relative">
       <img
         src="https://images.pexels.com/photos/3228766/pexels-photo-3228766.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
         className="absolute inset-0 object-cover w-full h-full"
@@ -135,6 +167,7 @@ const Signup = () => {
         </div>
       </div>
     </div>
+        </div>
     );
 };
 
