@@ -51,14 +51,17 @@ const Navbar = () => {
               {
                 user?
                 <li>
+                <Link to={"dashboard"}>
                 <a
-                  href="/"
+                  
                   aria-label="Our product"
                   title="Our product"
                   class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
                 >
                   Dashboard
                 </a>
+
+                </Link>
               </li>
               :
               <p></p>

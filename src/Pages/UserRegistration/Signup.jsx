@@ -21,7 +21,7 @@ const Signup = () => {
               email: data?.user?.email,
               name: name
             };
-            return fetch('http://localhost:3000/user',{
+            return fetch('https://crash-courses-server.onrender.com/user',{
               method: "POST",
             headers:{
               "Content-Type":"application/json"

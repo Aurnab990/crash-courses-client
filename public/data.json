@@ -1,0 +1,38 @@
+[
+    {
+        "email":"",
+        "title": "Introduction to Python Programming",
+        "instructor": "Jane Doe",
+        "price": 49.99,
+        "seats": 100,
+        "description": "Learn the basics of Python programming. No prior experience required.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMcqmWe-nTPsRseGfFWYdYosjQ5JmHjTrSRQ&s"
+    },
+    {
+        "email":"",
+        "title": "Advanced Machine Learning",
+        "instructor": "John Smith",
+        "price": 199.99,
+        "seats": 50,
+        "description": "Dive deep into machine learning techniques and algorithms.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMUn86QDrvTVPOVNjZwEQDtQaa1RRv7KB-Mw&s"
+    },
+    {
+        "email":"",
+        "title": "Web Development with JavaScript",
+        "instructor": "Emily Johnson",
+        "price": 79.99,
+        "seats": 75,
+        "description": "Master front-end and back-end web development using JavaScript.",
+        "img": "https://www.cdmi.in/courses@2x/web-developments.webp"
+    },
+    {
+        "email":"",
+        "title": "Digital Marketing Fundamentals",
+        "instructor": "Michael Brown",
+        "price": 59.99,
+        "seats": 150,
+        "description": "Learn the essentials of digital marketing to grow your business.",
+        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ954ngnoZskZA_elxQSOoV2LYaZRzBU3UCTA&s"
+    }
+]
